@@ -10,21 +10,24 @@ const MockToDoFooter = ({ numberOfIncompleteTasks }) => {
 
 }
 
-it('should render correct number of incomplete tasks', () => {
-    render(<MockToDoFooter numberOfIncompleteTasks={2} />);
-    const paragraph = screen.getByText(/2 tasks left/i)
-    expect(paragraph).toBeInTheDocument();
-});
+describe("TodoFooter test", () => {
+
+    it('should render correct number of incomplete tasks', () => {
+        render(<MockToDoFooter numberOfIncompleteTasks={2} />);
+        const paragraph = screen.getByText(/2 tasks left/i)
+        expect(paragraph).toBeInTheDocument();
+    });
 
 
-it('should render "task" when number of incomplete tasks is one', () => {
-    render(<MockToDoFooter numberOfIncompleteTasks={1} />);
-    const paragraph = screen.getByText(/1 task left/i)
-    expect(paragraph).toBeInTheDocument();
-});
+    it('should render "task" when number of incomplete tasks is one', () => {
+        render(<MockToDoFooter numberOfIncompleteTasks={1} />);
+        const paragraph = screen.getByText(/1 task left/i)
+        expect(paragraph).toBeInTheDocument();
+    });
+})
 
-it('should render "task" when number of incomplete tasks is one', () => {
-    render(<MockToDoFooter numberOfIncompleteTasks={1} />);
-    const paragraph = screen.getByText(/1 task left/i)
-    expect(paragraph).toBeVisible()
-});
+// it('should render "task" when number of incomplete tasks is one', () => {
+//     render(<MockToDoFooter numberOfIncompleteTasks={1} />);
+//     const paragraph = screen.getByText(/1 task left/i)
+//     expect(paragraph).toBeVisible()
+// });
