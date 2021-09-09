@@ -8,14 +8,34 @@ const MockFollowersList = () => {
     </BrowserRouter>
 }
 
-it('should render followers ', async () => {
-    render(<MockFollowersList />);
-    const followerDivElement = await screen.findByTestId("follower-item-0")
-    expect(followerDivElement).toBeInTheDocument()
-});
+describe("FollowerList test", () => {
 
-// it('should render 5 followers ', async () => {
-//     render(<MockFollowersList />);
-//     const followerDivElement = await screen.findAllByTestId(/follower-item/i)
-//     expect(followerDivElement.length).toBe(5)
-// });
+    beforeEach(() => {
+        console.log("Run before test")
+    })
+
+    beforeAll(() => {
+        console.log("Run once before all test")
+    })
+
+    afterEach(() => {
+        console.log("Run after test")
+    })
+
+    afterAll(() => {
+        console.log("Run after all tests")
+    })
+
+    it('should render followers ', async () => {
+        render(<MockFollowersList />);
+        const followerDivElement = await screen.findByTestId("follower-item-0")
+        expect(followerDivElement).toBeInTheDocument()
+    });
+
+    // it('should render 5 followers ', async () => {
+    //     render(<MockFollowersList />);
+    //     const followerDivElement = await screen.findAllByTestId(/follower-item/i)
+    //     expect(followerDivElement.length).toBe(5)
+    // });
+
+})
