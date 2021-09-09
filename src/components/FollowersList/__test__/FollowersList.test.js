@@ -14,8 +14,8 @@ it('should render followers ', async () => {
     expect(followerDivElement).toBeInTheDocument()
 });
 
-it('should render 5 followers ', async () => {
-    render(<MockFollowersList />);
-    const followerDivElement = await screen.findAllByTestId(/follower-item/i)
-    expect(followerDivElement.length).toBe(5)
-});
+// it('should render 5 followers ', async () => {
+//     render(<MockFollowersList />);
+//     const followerDivElement = await screen.findAllByTestId(/follower-item/i)
+//     expect(followerDivElement.length).toBe(5)
+// });
